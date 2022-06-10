@@ -9,5 +9,10 @@ If the vehicle has sirens and lights on, and if the officer exits the vehicle, i
 
 If using vMenu lock, ensure to set the vehicle to your personal vehicle in order to ensure you do not get locked out. In the future, there will be updates adding our own custom vehicle lock script integrated into this to be more efficient. Join the discord to keep up with the updates or if you require further assistance.  
 
+**How to install**
+
+1. Move resource into your resource folder
+2. Ensure resource in `server.cfg`
+
 **FOR SUPPORT, JOIN OUR DISCORD**
 https://discord.gg/aWtauUMK7j
