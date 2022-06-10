@@ -12,7 +12,9 @@ If using vMenu lock, ensure to set the vehicle to your personal vehicle in order
 **How to install**
 
 1. Move resource into your resource folder
-2. Ensure resource in `server.cfg`
+2. Paste the following into your `server.cfg`
+
+```start SD-Automated-LEO-and-Locking```
 
 **FOR SUPPORT, JOIN OUR DISCORD**
 https://discord.gg/aWtauUMK7j
