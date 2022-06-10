@@ -6,9 +6,9 @@ This source code is licensed under the BSD-style license found in the
 LICENSE file in the root directory of this source tree. 
 --]]
 
-Citizen.CreateThread(function()
+CreateThread(function()
 	while true do
-    playerped = GetPlayerPed(-1)
+    playerped = PlayerPedId()
     person_owns_vehicle = IsPedTryingToEnterALockedVehicle(playerPed)
     player_is_emerg_driver = false
     player_is_own_vehicle = false
@@ -28,6 +28,6 @@ Citizen.CreateThread(function()
         player_is_own_vehicle = false
         -- More to be added here, newer version soon.
 		end
-	Citizen.Wait(0)
+	Wait(0)
 	end
 end)
