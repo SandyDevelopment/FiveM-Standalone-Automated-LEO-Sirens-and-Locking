@@ -13,7 +13,6 @@ CreateThread(function()
     player_is_emerg_driver = false
     player_is_own_vehicle = false
     veh = GetVehiclePedIsUsing(playerped)
-    lastveh = GetPlayersLastVehicle()
     if IsVehicleSirenOn(veh) and IsPedInAnyVehicle(playerped, true) and IsControlPressed(0, 49) then
         player_is_emerg_driver = true
         SetVehicleSiren(veh, false)
