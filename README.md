@@ -18,3 +18,63 @@ If using vMenu lock, ensure to set the vehicle to your personal vehicle in order
 
 **FOR SUPPORT, JOIN OUR DISCORD**
 https://discord.gg/aWtauUMK7j
+
+
+QB Client.lua:
+```
+-- Siren & Lock Doors (Police) --
+
+CreateThread(function()
+
+    while true do
+
+    playerped = PlayerPedId()
+
+    person_owns_vehicle = IsPedTryingToEnterALockedVehicle(playerPed)
+
+    player_is_emerg_driver = false
+
+    player_is_own_vehicle = false
+
+    veh = GetVehiclePedIsUsing(playerped)
+
+    if IsVehicleSirenOn(veh) and IsPedInAnyVehicle(playerped, true) and IsControlPressed(0, 49) then
+
+        player_is_emerg_driver = true
+
+        SetVehicleSiren(veh, false)
+
+        Wait(1)
+
+        --SetPlayersLastVehicle(veh)
+
+        SetVehicleSiren(veh, true)
+
+        player_is_emerg_driver = false
+
+        player_is_own_vehicle = true
+
+    end
+
+    if player_is_own_vehicle then
+
+        -- SetVehicleDoorsLockedForAllPlayers(veh, true)
+
+        SetVehicleDoorsLocked(veh, 2)
+
+        QBCore.Functions.Notify("Vehicle locked!", "primary")                    
+
+        player_is_own_vehicle = false
+
+        -- More to be added here, newer version soon.
+
+        end
+
+    Wait(0)
+
+    end
+
+end)
+```
+
+- Thanks to LlamaPalooza for letting us know this.
