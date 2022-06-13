@@ -9,7 +9,7 @@ LICENSE file in the root directory of this source tree.
 CreateThread(function()
 	while true do
 	    playerped = PlayerPedId() -- Get player ped
-	    person_owns_vehicle = IsPedTryingToEnterALockedVehicle(playerPed) -- This is going to be used for the next version. 	
+	    person_owns_vehicle = IsPedTryingToEnterALockedVehicle(playerped) -- This is going to be used for the next version. 	
 	    player_is_emerg_driver = false	
 	    player_is_own_vehicle = false
 	    veh = GetVehiclePedIsUsing(playerped) -- Get vehicle ped is in
